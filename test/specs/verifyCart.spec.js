@@ -1,7 +1,7 @@
-const searchActions = require("../search/serachActions");
-const addToCartActions = require("../addToCart/addToCartActions");
-const cartActions = require("../cart/cartActions");
-const utilities = require("../utils/utilities");
+import searchActions from "../search/serachActions";
+import addToCartActions from "../addToCart/addToCartActions";
+import cartActions from "../cart/cartActions";
+import utilities from "../utils/utilities";
 
 const quantity = 3
 

@@ -1,12 +1,13 @@
-const cartObjects = require("./cartObjects");
+import cartObjects from "./cartObjects";
 
 class CartActions{
 
     async getGrandTotalAmount(){
+        await cartObjects.grandTotalAmount.waitForDisplayed();
         const grandTotal = await cartObjects.grandTotalAmount.getText();
         return grandTotal;
     }
 
 }
 
-module.exports = new CartActions();
+export default new CartActions();

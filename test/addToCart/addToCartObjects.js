@@ -9,11 +9,11 @@ class AddToCartObjects{
     }
 
     get size(){
-        return $("//a[conatins(text(),'S') and [@href='#']]");
+        return $("//a[contains(text(),'S') and @href='#']");
     }
 
     get color(){
-        return $("//a[conatins(text(),'Black') and [@href='#']]");
+        return $("//a[contains(text(),'Black') and @href='#']");
     }
 
     get quantity(){
@@ -21,13 +21,13 @@ class AddToCartObjects{
     }
 
     get addToCartButton(){
-        return $("//button[contains(text(),'ADD TO CART']");
+        return $("//button[contains(.,'ADD TO CART')]");
     }
 
     get viewCart(){
-        return $("//a[@href='/cart' and [@class='add-cart-popup-button']]");
+        return $("//a[@href='/cart' and @class='add-cart-popup-button']");
     }
 
 }
 
-module.exports = new AddToCartObjects();
+export default new AddToCartObjects();

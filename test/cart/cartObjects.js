@@ -5,4 +5,4 @@ class CartObjects{
     }
 }
 
-module.exports = new CartObjects();
+export default new CartObjects();

@@ -1,4 +1,4 @@
-const addToCartObjects = require("./addToCartObjects");
+import addToCartObjects from "./addToCartObjects";
 
 
 class AddToCartActions{
@@ -24,17 +24,24 @@ class AddToCartActions{
         return productPrice;
     }
 
+    async clickOnAddToCartButton(){
+        await addToCartObjects.addToCartButton.click();
+    }
+
     async clickOnViewCart(){
         await addToCartObjects.viewCart.click();
     }
 
     async addToCart(qty){
         await this.selectProduct();
-        await this.selectSize();
         await this.selectColor();
+        await browser.pause(5000);
+        await this.selectSize();
         await this.enterQuantity(qty);
+        await browser.pause(5000);
+        await this.clickOnAddToCartButton();
         await this.clickOnViewCart();
     }
 }
 
-module.exports = new AddToCartActions();
+export default new AddToCartActions();

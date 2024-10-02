@@ -1,9 +1,9 @@
 class Utilities {
 
     getAmountIntoNumber(text){
-        const numberData = parseFloat(text.replace("$",""));
+        const numberData = parseFloat(text.replace(/[$,]/g,""));
         return numberData;
     }
 }
 
-module.exports = new Utilities();
+export default new Utilities();

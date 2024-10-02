@@ -1,4 +1,4 @@
-const searchObjects = require('./searchObjects');
+import searchObjects from './searchObjects';
 
 const searchText ='Nike';
 const productCount = 3;
@@ -24,4 +24,4 @@ class SearchActions{
     }
 }
 
-module.exports = new SearchActions();
+export default new SearchActions();

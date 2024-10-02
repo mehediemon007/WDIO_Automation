@@ -9,4 +9,4 @@ class SearchObjects{
     
 }
 
-module.exports = new SearchObjects();
+export default new SearchObjects();
