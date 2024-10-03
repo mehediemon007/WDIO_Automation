@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","10179","Should able to varify product amount in cart successfully","","Thu Oct 03 19:31:17 GMT+06:00 2024","broken","Thu Oct 03 19:31:27 GMT+06:00 2024","","Evershop site Add Product To Cart and Verify Amount","",""
+"","16636","Should able to add product on cart successfully","","Thu Oct 03 19:31:00 GMT+06:00 2024","broken","Thu Oct 03 19:31:17 GMT+06:00 2024","","Evershop site Add Product To Cart and Verify Amount","",""
+"","28220","Should able to search valid product successfully","","Thu Oct 03 19:30:59 GMT+06:00 2024","passed","Thu Oct 03 19:31:27 GMT+06:00 2024","","Evershop site Add Product To Cart and Verify Amount","",""

@@ -17,7 +17,7 @@ class AddToCartObjects{
     }
 
     get quantity(){
-        return $("//input[@name='qty']");
+        return $("//input[@name='qty_']");
     }
 
     get addToCartButton(){

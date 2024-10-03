@@ -129,6 +129,11 @@ export const config = {
 
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
+    reporters: [['allure', {
+        outputDir: 'allure-results',
+        disableWebdriverStepsReporting: false,
+        disableWebdriverScreenshotsReporting: false
+    }]],
     mochaOpts: {
         ui: 'bdd',
         timeout: 60000
@@ -231,8 +236,13 @@ export const config = {
      * @param {boolean} result.passed    true if test has passed, otherwise false
      * @param {object}  result.retries   information about spec related retries, e.g. `{ attempts: 0, limit: 0 }`
      */
-    // afterTest: function(test, context, { error, result, duration, passed, retries }) {
-    // },
+    afterTest: async function(test, context, { error, result, duration, passed, retries }) {
+
+        if(error){
+            const screenshot = await browser.takeScreenshot();
+            allure.addAttachment('Screenshot', Buffer.from(await browser.takeScreenshot(), 'base64'), 'failure/png');
+        }
+    },
 
 
     /**
